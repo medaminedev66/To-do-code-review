@@ -14,4 +14,4 @@ const update = (task, e, description) => {
   });
   localStorage.setItem('list', JSON.stringify(oldList));
 };
-export default { update };
+export default update;
