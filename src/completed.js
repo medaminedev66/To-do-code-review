@@ -1,4 +1,4 @@
-export default function update(task, e, description) {
+const update = (task, e, description) => {
   if (e.target.checked) {
     task.completed = true;
     description.classList.add('done');
@@ -13,4 +13,5 @@ export default function update(task, e, description) {
     }
   });
   localStorage.setItem('list', JSON.stringify(oldList));
-}
+};
+export default { update };
