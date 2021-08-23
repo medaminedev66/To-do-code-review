@@ -2,7 +2,7 @@ import './style.css';
 import update from './completed.js';
 import * as func from './tasks.js';
 
-if (localStorage.getItem('list') == null) {
+if (localStorage.getItem('list') === null) {
   localStorage.setItem('list', JSON.stringify([]));
 }
 const createTask = (task) => {
@@ -52,7 +52,7 @@ const createTask = (task) => {
   });
 };
 const iterateTasks = () => {
-  if (localStorage.getItem('list') != null) {
+  if (localStorage.getItem('list') !== null) {
     const list = JSON.parse(localStorage.getItem('list'));
     list.forEach((task) => {
       createTask(task);
